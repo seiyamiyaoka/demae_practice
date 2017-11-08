@@ -1,24 +1,18 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## how to
 
-Things you may want to cover:
+### 環境構築後にrake db:seedでデータを入れます
 
-* Ruby version
+## 出前を注文するアプリです
 
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+### usersテーブル お客さんの情報が入ります
+### ordersテーブル 注文内容が入ります(住所など入れる予定, user_id)
+### order_informationsテーブル 注文の詳細情報(カードの情報, order_id, 現金支払いなど)
+### shopsテーブル お店情報(お店の名前, cityのid)
+### citiesテーブル 区の名前(杉並区, 渋谷区など)
+### genresテーブル (中華, イタリアンなど)
+### genre_shopsテーブル(中間テーブル)
+### categoriesテーブル(デザート, 定食など)
+### foodsテーブル(category_id, shop_id, 商品名)
+### food_ordersテーブル(中間テーブル)
