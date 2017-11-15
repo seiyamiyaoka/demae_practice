@@ -2,6 +2,7 @@ require 'csv'
 genres = %w(中華 イタリアン 和食)
 categories = %w(魚 肉 野菜)
 payments = %w(クレジット 現金 請求書)
+prcies = %w(500 1000 1500 2000)
 cities = []
 
 class MasterDate
@@ -45,7 +46,7 @@ end
   # TODO: カテゴリ作成
   shop =  data_obj.random_data("Shop")
   category = Category.create(name: categories[rand_num])
-  category.foods.build(shop_id: shop.id, name: Faker::Food.dish).save
+  category.foods.build(shop_id: shop.id, name: Faker::Food.dish, price: prcies.sample.to_i).save
 
   user = data_obj.random_data("User")
   food = category.foods.first
