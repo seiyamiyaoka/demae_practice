@@ -14,7 +14,7 @@ class MasterDate
   end
 
   def random_data(obj)
-    eval("#{obj}.offset((rand(City.count))).first")
+    eval("#{obj}.offset((rand(#{obj}.count))).first")
   end
 end
 
