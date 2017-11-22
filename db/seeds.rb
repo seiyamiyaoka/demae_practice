@@ -17,6 +17,14 @@ class MasterDate
   def random_data(obj)
     eval("#{obj}.offset((rand(#{obj}.count))).first")
   end
+
+  def self.category_setup(categories)
+
+  end
+
+  def maluti_create(type, times)
+
+  end
 end
 
 data_obj = MasterDate.new
